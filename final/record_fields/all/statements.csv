@@ -1,0 +1,71 @@
+module,entity,record,occurrence,line,text,clocked,fields,value records,value is a process variable,pairs on the record
+neorv32_bus,neorv32_bus_reg,device_req_o,2,219,device_req_o <= req_terminate_c;,False,12,,False,rstn_i#3 RESETS
+neorv32_bus,neorv32_bus_reg,device_req_o,3,222,device_req_o <= host_req_i;,True,12,host_req_i#3,False,clk_i#3 SEQUENCES; host_req_i#3 CARRIES; host_req_i.stb#2 GATES
+neorv32_bus,neorv32_bus_reg,device_req_o,7,233,device_req_o <= host_req_i;,False,12,host_req_i#7,False,host_req_i#7 CARRIES
+neorv32_bus,neorv32_bus_reg,host_rsp_o,2,244,host_rsp_o <= rsp_terminate_c;,False,3,,False,rstn_i#5 RESETS
+neorv32_bus,neorv32_bus_reg,host_rsp_o,3,246,host_rsp_o <= device_rsp_i;,True,3,device_rsp_i#2,False,clk_i#5 SEQUENCES; device_rsp_i#2 CARRIES
+neorv32_bus,neorv32_bus_reg,host_rsp_o,4,253,host_rsp_o <= device_rsp_i;,False,3,device_rsp_i#3,False,device_rsp_i#3 CARRIES
+neorv32_bus,neorv32_bus_gateway,a_req_o,2,366,a_req_o <= port_req(0); port_rsp(0) <= a_rsp_i;,False,12,,False,port_req#2 SOURCES
+neorv32_bus,neorv32_bus_gateway,b_req_o,2,367,b_req_o <= port_req(1); port_rsp(1) <= b_rsp_i;,False,12,,False,port_req#3 SOURCES
+neorv32_bus,neorv32_bus_gateway,c_req_o,2,368,c_req_o <= port_req(2); port_rsp(2) <= c_rsp_i;,False,12,,False,port_req#4 SOURCES
+neorv32_bus,neorv32_bus_gateway,x_req_o,2,369,x_req_o <= port_req(3); port_rsp(3) <= x_rsp_i;,False,12,,False,port_req#5 SOURCES
+neorv32_bus,neorv32_bus_gateway,int_rsp,2,395,int_rsp <= tmp_v;,False,3,,True,port_rsp#7 SOURCES; port_rsp#8 SOURCES; port_rsp#9 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_00_req_o,2,617,dev_00_req_o <= dev_req(0);  dev_rsp(0)  <= dev_00_rsp_i;,False,12,,False,dev_req#2 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_01_req_o,2,618,dev_01_req_o <= dev_req(1);  dev_rsp(1)  <= dev_01_rsp_i;,False,12,,False,dev_req#3 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_02_req_o,2,619,dev_02_req_o <= dev_req(2);  dev_rsp(2)  <= dev_02_rsp_i;,False,12,,False,dev_req#4 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_03_req_o,2,620,dev_03_req_o <= dev_req(3);  dev_rsp(3)  <= dev_03_rsp_i;,False,12,,False,dev_req#5 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_04_req_o,2,621,dev_04_req_o <= dev_req(4);  dev_rsp(4)  <= dev_04_rsp_i;,False,12,,False,dev_req#6 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_05_req_o,2,622,dev_05_req_o <= dev_req(5);  dev_rsp(5)  <= dev_05_rsp_i;,False,12,,False,dev_req#7 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_06_req_o,2,623,dev_06_req_o <= dev_req(6);  dev_rsp(6)  <= dev_06_rsp_i;,False,12,,False,dev_req#8 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_07_req_o,2,624,dev_07_req_o <= dev_req(7);  dev_rsp(7)  <= dev_07_rsp_i;,False,12,,False,dev_req#9 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_08_req_o,2,625,dev_08_req_o <= dev_req(8);  dev_rsp(8)  <= dev_08_rsp_i;,False,12,,False,dev_req#10 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_09_req_o,2,626,dev_09_req_o <= dev_req(9);  dev_rsp(9)  <= dev_09_rsp_i;,False,12,,False,dev_req#11 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_10_req_o,2,627,dev_10_req_o <= dev_req(10); dev_rsp(10) <= dev_10_rsp_i;,False,12,,False,dev_req#12 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_11_req_o,2,628,dev_11_req_o <= dev_req(11); dev_rsp(11) <= dev_11_rsp_i;,False,12,,False,dev_req#13 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_12_req_o,2,629,dev_12_req_o <= dev_req(12); dev_rsp(12) <= dev_12_rsp_i;,False,12,,False,dev_req#14 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_13_req_o,2,630,dev_13_req_o <= dev_req(13); dev_rsp(13) <= dev_13_rsp_i;,False,12,,False,dev_req#15 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_14_req_o,2,631,dev_14_req_o <= dev_req(14); dev_rsp(14) <= dev_14_rsp_i;,False,12,,False,dev_req#16 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_15_req_o,2,632,dev_15_req_o <= dev_req(15); dev_rsp(15) <= dev_15_rsp_i;,False,12,,False,dev_req#17 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_16_req_o,2,633,dev_16_req_o <= dev_req(16); dev_rsp(16) <= dev_16_rsp_i;,False,12,,False,dev_req#18 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_17_req_o,2,634,dev_17_req_o <= dev_req(17); dev_rsp(17) <= dev_17_rsp_i;,False,12,,False,dev_req#19 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_18_req_o,2,635,dev_18_req_o <= dev_req(18); dev_rsp(18) <= dev_18_rsp_i;,False,12,,False,dev_req#20 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_19_req_o,2,636,dev_19_req_o <= dev_req(19); dev_rsp(19) <= dev_19_rsp_i;,False,12,,False,dev_req#21 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_20_req_o,2,637,dev_20_req_o <= dev_req(20); dev_rsp(20) <= dev_20_rsp_i;,False,12,,False,dev_req#22 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_21_req_o,2,638,dev_21_req_o <= dev_req(21); dev_rsp(21) <= dev_21_rsp_i;,False,12,,False,dev_req#23 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_22_req_o,2,639,dev_22_req_o <= dev_req(22); dev_rsp(22) <= dev_22_rsp_i;,False,12,,False,dev_req#24 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_23_req_o,2,640,dev_23_req_o <= dev_req(23); dev_rsp(23) <= dev_23_rsp_i;,False,12,,False,dev_req#25 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_24_req_o,2,641,dev_24_req_o <= dev_req(24); dev_rsp(24) <= dev_24_rsp_i;,False,12,,False,dev_req#26 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_25_req_o,2,642,dev_25_req_o <= dev_req(25); dev_rsp(25) <= dev_25_rsp_i;,False,12,,False,dev_req#27 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_26_req_o,2,643,dev_26_req_o <= dev_req(26); dev_rsp(26) <= dev_26_rsp_i;,False,12,,False,dev_req#28 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_27_req_o,2,644,dev_27_req_o <= dev_req(27); dev_rsp(27) <= dev_27_rsp_i;,False,12,,False,dev_req#29 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_28_req_o,2,645,dev_28_req_o <= dev_req(28); dev_rsp(28) <= dev_28_rsp_i;,False,12,,False,dev_req#30 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_29_req_o,2,646,dev_29_req_o <= dev_req(29); dev_rsp(29) <= dev_29_rsp_i;,False,12,,False,dev_req#31 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_30_req_o,2,647,dev_30_req_o <= dev_req(30); dev_rsp(30) <= dev_30_rsp_i;,False,12,,False,dev_req#32 SOURCES
+neorv32_bus,neorv32_bus_io_switch,dev_31_req_o,2,648,dev_31_req_o <= dev_req(31); dev_rsp(31) <= dev_31_rsp_i;,False,12,,False,dev_req#33 SOURCES
+neorv32_bus,neorv32_bus_io_switch,main_rsp,3,690,main_rsp <= tmp_v;,False,3,,True,dev_rsp#35 SOURCES; dev_rsp#36 SOURCES; dev_rsp#37 SOURCES
+neorv32_bus,neorv32_bus_amo_rmw,arbiter,6,763,arbiter <= arbiter_nxt;,True,4,arbiter_nxt#2,False,arbiter_nxt#2 CARRIES; clk_i#3 SEQUENCES
+neorv32_bus,neorv32_bus_amo_rmw,arbiter_nxt,3,772,arbiter_nxt <= arbiter;,False,4,arbiter#8,False,arbiter#8 CARRIES
+neorv32_bus,neorv32_bus_amo_rvs,sys_req_o,2,942,sys_req_o <= core_req_i;,False,12,core_req_i#9,False,core_req_i#9 CARRIES
+neorv32_cache,neorv32_cache,ctrl,10,126,ctrl <= ctrl_nxt;,True,8,ctrl_nxt#2,False,clk_i#3 SEQUENCES; ctrl_nxt#2 CARRIES
+neorv32_cache,neorv32_cache,bus_req_o,2,159,bus_req_o       <= host_req_i;,False,12,host_req_i#7,False,host_req_i#7 CARRIES
+neorv32_cache,neorv32_cache,host_rsp_o,6,209,host_rsp_o <= bus_rsp_i;,False,3,bus_rsp_i#3,False,bus_rsp_i#3 CARRIES; ctrl.state#4 SELECTS
+neorv32_cpu,neorv32_cpu,icc_tx_o,3,455,icc_tx_o <= icc_terminate_c;,False,3,,False,
+neorv32_cpu_control,neorv32_cpu_control,ctrl,2,267,ctrl             <= ctrl_bus_zero_c;,False,39,,False,rstn_i#5 RESETS
+neorv32_cpu_control,neorv32_cpu_control,ctrl,3,275,ctrl       <= ctrl_nxt;,True,39,ctrl_nxt#2,False,clk_i#5 SEQUENCES; ctrl_nxt#2 CARRIES
+neorv32_cpu_control,neorv32_cpu_control,exe_engine,29,276,exe_engine <= exe_engine_nxt;,True,6,exe_engine_nxt#2,False,clk_i#5 SEQUENCES; exe_engine_nxt#2 CARRIES
+neorv32_cpu_control,neorv32_cpu_control,ctrl_nxt,3,312,ctrl_nxt             <= ctrl_bus_zero_c;,False,39,,False,
+neorv32_debug_dm,neorv32_debug_dm,bus_rsp_o,2,653,bus_rsp_o    <= rsp_terminate_c;,False,3,,False,rstn_i#11 RESETS
+neorv32_gpio,neorv32_gpio,bus_rsp_o,2,58,bus_rsp_o <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_gptmr,neorv32_gptmr,bus_rsp_o,2,62,bus_rsp_o   <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_hwspinlock,neorv32_hwspinlock,bus_rsp_o,2,61,bus_rsp_o <= rsp_terminate_c;,False,3,,False,rstn_i#5 RESETS
+neorv32_neoled,neorv32_neoled,bus_rsp_o,2,120,bus_rsp_o     <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_onewire,neorv32_onewire,bus_rsp_o,2,129,bus_rsp_o     <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_pwm,neorv32_pwm,bus_rsp_o,2,67,bus_rsp_o <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_sdi,neorv32_sdi,bus_rsp_o,2,116,bus_rsp_o         <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_slink,neorv32_slink,bus_rsp_o,2,122,bus_rsp_o          <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_spi,neorv32_spi,bus_rsp_o,2,119,bus_rsp_o         <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_trng,neorv32_trng,bus_rsp_o,2,93,bus_rsp_o <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_twd,neorv32_twd,bus_rsp_o,2,137,bus_rsp_o         <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_twi,neorv32_twi,bus_rsp_o,2,123,bus_rsp_o   <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_uart,neorv32_uart,bus_rsp_o,2,155,bus_rsp_o          <= rsp_terminate_c;,False,3,,False,rstn_i#3 RESETS
+neorv32_wdt,neorv32_wdt,bus_rsp_o,2,74,bus_rsp_o    <= rsp_terminate_c;,False,3,,False,rstn_sys_i#3 RESETS

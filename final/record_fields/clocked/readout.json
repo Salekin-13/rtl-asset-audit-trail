@@ -1,0 +1,180 @@
+{
+ "scope": "clocked",
+ "summary": {
+  "tuning": {
+   "modules": 15,
+   "elements": 1641,
+   "fields": 1230,
+   "changed elements": 57,
+   "modules with a change": 2,
+   "by kind of change": {
+    "far end only (gains a driving record)": 3,
+    "read (whole-record value)": 27,
+    "assigned (whole-record target)": 27
+   },
+   "storage (old -> new)": {
+    "none -> edge": 12,
+    "not assigned -> edge": 12
+   },
+   "boundary drive (old -> new)": {
+    "undriven -> driven": 12
+   },
+   "handling changed": 36,
+   "constant drivers added": 0,
+   "configuration added": 15,
+   "record facts added (type, one per target x occurrence)": {
+    "CARRIES": 27,
+    "CLOCKED_BY": 27,
+    "COPIES": 27,
+    "SEQUENCES": 24,
+    "GATES": 12,
+    "GATED_BY": 12
+   },
+   "old facts whose guard text was rewritten": 0,
+   "invariant failures": {}
+  },
+  "heldout": {
+   "modules": 26,
+   "elements": 1713,
+   "fields": 1201,
+   "changed elements": 91,
+   "modules with a change": 1,
+   "by kind of change": {
+    "far end only (gains a driving record)": 1,
+    "assigned (whole-record target)": 45,
+    "read (whole-record value)": 45
+   },
+   "storage (old -> new)": {
+    "none -> edge": 6,
+    "not assigned -> edge": 39
+   },
+   "boundary drive (old -> new)": {},
+   "handling changed": 84,
+   "constant drivers added": 0,
+   "configuration added": 0,
+   "record facts added (type, one per target x occurrence)": {
+    "SEQUENCES": 45,
+    "CLOCKED_BY": 45,
+    "COPIES": 45,
+    "CARRIES": 45
+   },
+   "old facts whose guard text was rewritten": 0,
+   "invariant failures": {}
+  }
+ },
+ "design maps changed": 0,
+ "flow": {
+  "tuning": {
+   "modules": 15,
+   "traced input text changed": 2,
+   "flow graph changed": 2,
+   "(path source, stored element) pairs": {
+    "added": 18,
+    "removed": 3
+   },
+   "(path source, exit) pairs": {
+    "added": 13,
+    "removed": 7
+   },
+   "clock_reset: entered": 0,
+   "clock_reset: left": 0,
+   "no_local_use: entered": 0,
+   "no_local_use: left": 24,
+   "not_on_an_input_path: entered": 13,
+   "not_on_an_input_path: left": 0,
+   "records: entered": 0,
+   "records: left": 0,
+   "self_updating: entered": 0,
+   "self_updating: left": 0,
+   "unmatched driving records (new map)": 42,
+   "unmatched receiving records (new map)": 116
+  },
+  "heldout": {
+   "modules": 26,
+   "traced input text changed": 1,
+   "flow graph changed": 1,
+   "(path source, stored element) pairs": {
+    "added": 94,
+    "removed": 78
+   },
+   "(path source, exit) pairs": {
+    "added": 52,
+    "removed": 20
+   },
+   "clock_reset: entered": 0,
+   "clock_reset: left": 0,
+   "no_local_use: entered": 0,
+   "no_local_use: left": 48,
+   "not_on_an_input_path: entered": 50,
+   "not_on_an_input_path: left": 29,
+   "records: entered": 0,
+   "records: left": 0,
+   "self_updating: entered": 0,
+   "self_updating: left": 0,
+   "unmatched driving records (new map)": 7,
+   "unmatched receiving records (new map)": 92
+  }
+ },
+ "recheck": {
+  "tuning": {
+   "citations checked (3 runs, refs + influence points)": 725,
+   "status changed": 0,
+   "transitions": {},
+   "rows": []
+  },
+  "heldout": {
+   "citations checked (3 runs, refs + influence points)": 1472,
+   "status changed": 0,
+   "transitions": {},
+   "rows": []
+  }
+ },
+ "listings": {
+  "tuning": {
+   "listed structural assets (3 runs)": 725,
+   "on a changed element": 46,
+   "on an element whose storage changed": 16
+  },
+  "heldout": {
+   "listed structural assets (3 runs)": 1472,
+   "on a changed element": 25,
+   "on an element whose storage changed": 5
+  }
+ },
+ "relation accuracy": {
+  "stored": {
+   "occurrences": 120,
+   "gold records": 212,
+   "typed precision": 0.988,
+   "precision 95% CI": [
+    0.969,
+    1.0
+   ],
+   "typed recall": 0.988,
+   "recall 95% CI": [
+    0.969,
+    1.0
+   ],
+   "target-only precision": 1.0,
+   "target-only recall": 1.0,
+   "correct / wrong / missed (unweighted)": "210 / 2 / 2"
+  },
+  "new": {
+   "occurrences": 120,
+   "gold records": 212,
+   "typed precision": 0.988,
+   "precision 95% CI": [
+    0.969,
+    1.0
+   ],
+   "typed recall": 0.988,
+   "recall 95% CI": [
+    0.969,
+    1.0
+   ],
+   "target-only precision": 1.0,
+   "target-only recall": 1.0,
+   "correct / wrong / missed (unweighted)": "210 / 2 / 2"
+  }
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "neorv32_bus": [
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "device_req_o",
+   "occurrence": 3,
+   "line": 222,
+   "text": "device_req_o <= host_req_i;",
+   "clocked": true,
+   "fields": 12,
+   "value records": [
+    "host_req_i#3"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#3 SEQUENCES",
+    "host_req_i#3 CARRIES",
+    "host_req_i.stb#2 GATES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "host_rsp_o",
+   "occurrence": 3,
+   "line": 246,
+   "text": "host_rsp_o <= device_rsp_i;",
+   "clocked": true,
+   "fields": 3,
+   "value records": [
+    "device_rsp_i#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#5 SEQUENCES",
+    "device_rsp_i#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_amo_rmw",
+   "record": "arbiter",
+   "occurrence": 6,
+   "line": 763,
+   "text": "arbiter <= arbiter_nxt;",
+   "clocked": true,
+   "fields": 4,
+   "value records": [
+    "arbiter_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "arbiter_nxt#2 CARRIES",
+    "clk_i#3 SEQUENCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cache": [
+  {
+   "entity": "neorv32_cache",
+   "record": "ctrl",
+   "occurrence": 10,
+   "line": 126,
+   "text": "ctrl <= ctrl_nxt;",
+   "clocked": true,
+   "fields": 8,
+   "value records": [
+    "ctrl_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#3 SEQUENCES",
+    "ctrl_nxt#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cpu": [],
+ "neorv32_cpu_cp_cfu": [],
+ "neorv32_cpu_cp_muldiv": [],
+ "neorv32_cpu_pmp": [],
+ "neorv32_debug_dtm": [],
+ "neorv32_hwspinlock": [],
+ "neorv32_imem": [],
+ "neorv32_spi": [],
+ "neorv32_sys": [],
+ "neorv32_trng": [],
+ "neorv32_twi": [],
+ "neorv32_uart": [],
+ "neorv32_wdt": [],
+ "neorv32_boot_rom": [],
+ "neorv32_fifo": [],
+ "neorv32_cpu_alu": [],
+ "neorv32_cpu_control": [
+  {
+   "entity": "neorv32_cpu_control",
+   "record": "ctrl",
+   "occurrence": 3,
+   "line": 275,
+   "text": "ctrl       <= ctrl_nxt;",
+   "clocked": true,
+   "fields": 39,
+   "value records": [
+    "ctrl_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#5 SEQUENCES",
+    "ctrl_nxt#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_cpu_control",
+   "record": "exe_engine",
+   "occurrence": 29,
+   "line": 276,
+   "text": "exe_engine <= exe_engine_nxt;",
+   "clocked": true,
+   "fields": 6,
+   "value records": [
+    "exe_engine_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#5 SEQUENCES",
+    "exe_engine_nxt#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cpu_counters": [],
+ "neorv32_cpu_cp_bitmanip": [],
+ "neorv32_cpu_cp_cond": [],
+ "neorv32_cpu_cp_crypto": [],
+ "neorv32_cpu_cp_fpu": [],
+ "neorv32_cpu_cp_shifter": [],
+ "neorv32_cpu_decompressor": [],
+ "neorv32_cpu_frontend": [],
+ "neorv32_cpu_icc": [],
+ "neorv32_cpu_lsu": [],
+ "neorv32_cpu_regfile": [],
+ "neorv32_debug_auth": [],
+ "neorv32_debug_dm": [],
+ "neorv32_dmem": [],
+ "neorv32_gpio": [],
+ "neorv32_gptmr": [],
+ "neorv32_neoled": [],
+ "neorv32_onewire": [],
+ "neorv32_pwm": [],
+ "neorv32_sdi": [],
+ "neorv32_slink": [],
+ "neorv32_sysinfo": [],
+ "neorv32_twd": [],
+ "neorv32_xbus": []
+}

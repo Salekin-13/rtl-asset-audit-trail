@@ -29,6 +29,12 @@
 /final/maps/
 /final/traced_inputs/
 /final/closed_sets/
+# map fixes of 2026-10-09/10: code, READMEs and read-outs are published; the rebuilt files are not
+# (run final/record_fields.py, then final/flow_entities.py, then final/record_scope.py; each self-tests its rebuild)
+/final/record_fields/*/closed_sets/
+/final/record_fields/*/maps/
+/final/record_fields/*/occurrence_profiles/
+/final/record_fields/*/traced_inputs/
 # ablation notebooks
 !/notebooks/
 

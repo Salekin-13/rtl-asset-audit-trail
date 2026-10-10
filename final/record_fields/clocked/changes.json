@@ -1,0 +1,7853 @@
+{
+ "tuning": {
+  "modules": 15,
+  "elements": 1641,
+  "fields": 1230,
+  "changed": [
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "clk_i",
+    "array": "ports",
+    "occurrences added": [],
+    "facts added": [
+     [
+      "SEQUENCES",
+      "device_req_o.addr",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.amo",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.amoop",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.ben",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.data",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.debug",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.priv",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.rw",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "device_req_o.src",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "host_rsp_o.ack",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "host_rsp_o.data",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "host_rsp_o.err",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "far end only (gains a driving record)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.addr",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.addr",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.data",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.data",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.ben",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.ben",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.stb",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.stb",
+      4,
+      null,
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.addr",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.amo",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.amoop",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.ben",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.data",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.debug",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.fence",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.lock",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.priv",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.rw",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.src",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ],
+     [
+      "GATES",
+      "device_req_o.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.rw",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.rw",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.src",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.src",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.priv",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.priv",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.debug",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.debug",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.amo",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.amo",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.amoop",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.amoop",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.lock",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.lock",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_req_i.fence",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "device_req_o.fence",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_rsp_o.ack",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 246,
+      "text": "host_rsp_o <= device_rsp_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "device_rsp_i.ack",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] RSP_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_rsp_o.err",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 246,
+      "text": "host_rsp_o <= device_rsp_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "device_rsp_i.err",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] RSP_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "host_rsp_o.data",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 246,
+      "text": "host_rsp_o <= device_rsp_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "device_rsp_i.data",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] RSP_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.addr",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.addr",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.data",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.data",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.ben",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.ben",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.stb",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.stb",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      3,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "configuration": [
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2,
+         3
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.rw",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.rw",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.src",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.src",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.priv",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.priv",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.debug",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.debug",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.amo",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.amo",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.amoop",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.amoop",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      2,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ],
+     "boundary": [
+      {
+       "mode": "out",
+       "drive": "undriven"
+      },
+      {
+       "mode": "out",
+       "drive": "driven"
+      }
+     ],
+     "configuration": [
+      [],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.lock",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.lock",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      3,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "configuration": [
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2,
+         3
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_req_o.fence",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 222,
+      "text": "device_req_o <= host_req_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "host_req_i.fence",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "GATED_BY",
+      "host_req_i.stb",
+      3,
+      "host_req_i.stb = '1'",
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "configuration": [
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2
+        ]
+       }
+      ],
+      [
+       {
+        "condition": "[generic] REQ_REG_EN",
+        "at": [
+         2,
+         3
+        ]
+       }
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_rsp_i.ack",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 246,
+      "text": "host_rsp_o <= device_rsp_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "host_rsp_o.ack",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_rsp_i.err",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 246,
+      "text": "host_rsp_o <= device_rsp_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "host_rsp_o.err",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_reg",
+    "element": "device_rsp_i.data",
+    "array": "ports",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 246,
+      "text": "host_rsp_o <= device_rsp_i;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "host_rsp_o.data",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "clk_i",
+    "array": "ports",
+    "occurrences added": [],
+    "facts added": [
+     [
+      "SEQUENCES",
+      "arbiter.cmd",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "arbiter.rdata",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "arbiter.state",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "arbiter.wdata",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "far end only (gains a driving record)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter.state",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 14,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      14,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "arbiter_nxt.state",
+      14,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter.cmd",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 7,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      7,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "arbiter_nxt.cmd",
+      7,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter.rdata",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 11,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      11,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "arbiter_nxt.rdata",
+      11,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter.wdata",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 11,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      11,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "arbiter_nxt.wdata",
+      11,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter_nxt.state",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 8,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "arbiter.state",
+      8,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter_nxt.cmd",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "arbiter.cmd",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter_nxt.rdata",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "arbiter.rdata",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_bus",
+    "entity": "neorv32_bus_amo_rmw",
+    "element": "arbiter_nxt.wdata",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 763,
+      "text": "arbiter <= arbiter_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "arbiter.wdata",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "clk_i",
+    "array": "ports",
+    "occurrences added": [],
+    "facts added": [
+     [
+      "SEQUENCES",
+      "ctrl.buf_dir",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.buf_err",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.buf_req",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.buf_sync",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.idx",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.ofs",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.state",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.tag",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "far end only (gains a driving record)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.state",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.state",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.buf_req",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.buf_req",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.buf_sync",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.buf_sync",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.buf_err",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 6,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      6,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.buf_err",
+      6,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.buf_dir",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      4,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.buf_dir",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.tag",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 8,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      8,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.tag",
+      8,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.idx",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 8,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      8,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.idx",
+      8,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl.ofs",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 10,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      10,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.ofs",
+      10,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.state",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 18,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.state",
+      18,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.buf_req",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.buf_req",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.buf_sync",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.buf_sync",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.buf_err",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.buf_err",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.buf_dir",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.buf_dir",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.tag",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.tag",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.idx",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.idx",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cache",
+    "entity": "neorv32_cache",
+    "element": "ctrl_nxt.ofs",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 126,
+      "text": "ctrl <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.ofs",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   }
+  ]
+ },
+ "heldout": {
+  "modules": 26,
+  "elements": 1713,
+  "fields": 1201,
+  "changed": [
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "clk_i",
+    "array": "ports",
+    "occurrences added": [],
+    "facts added": [
+     [
+      "SEQUENCES",
+      "ctrl.alu_cp_alu",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_cp_cfu",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_cp_fpu",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_imm",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_op",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_opa_mux",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_opb_mux",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_sub",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.alu_unsigned",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.cnt_event",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.cnt_halt",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.cpu_debug",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.cpu_priv",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.cpu_sleep",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.cpu_trap",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.csr_addr",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.csr_re",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.csr_wdata",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.csr_we",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.if_ack",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.if_fence",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.if_reset",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.ir_funct12",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.ir_funct3",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.ir_opcode",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.lsu_amo",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.lsu_fence",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.lsu_mo_we",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.lsu_priv",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.lsu_req",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.lsu_rw",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.pc_cur",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.pc_nxt",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.pc_ret",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.rf_rd",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.rf_rs1",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.rf_rs2",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.rf_wb_en",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "ctrl.rf_zero_we",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "exe_engine.ci",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "exe_engine.ir",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "exe_engine.pc",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "exe_engine.pc2",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "exe_engine.ra",
+      5,
+      null,
+      "null"
+     ],
+     [
+      "SEQUENCES",
+      "exe_engine.state",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {},
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "far end only (gains a driving record)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine.state",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 24,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      24,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "exe_engine_nxt.state",
+      24,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine.ir",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 65,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      65,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "exe_engine_nxt.ir",
+      65,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine.ci",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 6,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      6,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "exe_engine_nxt.ci",
+      6,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine.pc",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 6,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      6,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "exe_engine_nxt.pc",
+      6,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine.pc2",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 10,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      10,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "exe_engine_nxt.pc2",
+      10,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine.ra",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      4,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "exe_engine_nxt.ra",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "none",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine_nxt.state",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 32,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "exe_engine.state",
+      32,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine_nxt.ir",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "exe_engine.ir",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine_nxt.ci",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "exe_engine.ci",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine_nxt.pc",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "exe_engine.pc",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine_nxt.pc2",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 11,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "exe_engine.pc2",
+      11,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "exe_engine_nxt.ra",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 276,
+      "text": "exe_engine <= exe_engine_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "exe_engine.ra",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.if_fence",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.if_fence",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.if_reset",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.if_reset",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.if_ack",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.if_ack",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.pc_cur",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.pc_cur",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.pc_nxt",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.pc_nxt",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.pc_ret",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.pc_ret",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.rf_wb_en",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.rf_wb_en",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "CONSUMES"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.rf_rs1",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.rf_rs1",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.rf_rs2",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.rf_rs2",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.rf_rd",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.rf_rd",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.rf_zero_we",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.rf_zero_we",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_op",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_op",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_sub",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_sub",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_opa_mux",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_opa_mux",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_opb_mux",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_opb_mux",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_unsigned",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_unsigned",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_imm",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_imm",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_cp_alu",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_cp_alu",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_cp_cfu",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_cp_cfu",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.alu_cp_fpu",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.alu_cp_fpu",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.lsu_req",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 6,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      6,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.lsu_req",
+      6,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.lsu_rw",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      4,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.lsu_rw",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.lsu_amo",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      4,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.lsu_amo",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.lsu_mo_we",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.lsu_mo_we",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.lsu_fence",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      3,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.lsu_fence",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.lsu_priv",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.lsu_priv",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.csr_we",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.csr_we",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.csr_re",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.csr_re",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.csr_addr",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.csr_addr",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.csr_wdata",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.csr_wdata",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.cnt_halt",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.cnt_halt",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.cnt_event",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.cnt_event",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.ir_funct3",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.ir_funct3",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.ir_funct12",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.ir_funct12",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.ir_opcode",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.ir_opcode",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.cpu_priv",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.cpu_priv",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.cpu_sleep",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.cpu_sleep",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.cpu_trap",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.cpu_trap",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl.cpu_debug",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CLOCKED_BY",
+      "clk_i",
+      2,
+      null,
+      "null"
+     ],
+     [
+      "COPIES",
+      "ctrl_nxt.cpu_debug",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "storage": [
+      "not assigned",
+      "edge"
+     ],
+     "kind": [
+      "signal",
+      "register"
+     ],
+     "handling": [
+      [],
+      [
+       "ORIGINATES"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "assigned (whole-record target)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.if_fence",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.if_fence",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.if_reset",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.if_reset",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.if_ack",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.if_ack",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.pc_cur",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.pc_cur",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.pc_nxt",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.pc_nxt",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.pc_ret",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.pc_ret",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.rf_wb_en",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 9,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.rf_wb_en",
+      9,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.rf_rs1",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.rf_rs1",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.rf_rs2",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.rf_rs2",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.rf_rd",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.rf_rd",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.rf_zero_we",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.rf_zero_we",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_op",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 12,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_op",
+      12,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_sub",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_sub",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_opa_mux",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_opa_mux",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_opb_mux",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_opb_mux",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_unsigned",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 4,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_unsigned",
+      4,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_imm",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_imm",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_cp_alu",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_cp_alu",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_cp_cfu",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_cp_cfu",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.alu_cp_fpu",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.alu_cp_fpu",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.lsu_req",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.lsu_req",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.lsu_rw",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.lsu_rw",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.lsu_amo",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 5,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.lsu_amo",
+      5,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.lsu_mo_we",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.lsu_mo_we",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.lsu_fence",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 3,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.lsu_fence",
+      3,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "ORIGINATES",
+       "FORWARDS"
+      ],
+      [
+       "ORIGINATES",
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.lsu_priv",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.lsu_priv",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.csr_we",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.csr_we",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.csr_re",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.csr_re",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.csr_addr",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.csr_addr",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.csr_wdata",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.csr_wdata",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.cnt_halt",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.cnt_halt",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.cnt_event",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.cnt_event",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.ir_funct3",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.ir_funct3",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.ir_funct12",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.ir_funct12",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.ir_opcode",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.ir_opcode",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.cpu_priv",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.cpu_priv",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.cpu_sleep",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.cpu_sleep",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.cpu_trap",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.cpu_trap",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   },
+   {
+    "module": "neorv32_cpu_control",
+    "entity": "neorv32_cpu_control",
+    "element": "ctrl_nxt.cpu_debug",
+    "array": "signals",
+    "occurrences added": [
+     {
+      "id": 2,
+      "line": 275,
+      "text": "ctrl       <= ctrl_nxt;"
+     }
+    ],
+    "facts added": [
+     [
+      "CARRIES",
+      "ctrl.cpu_debug",
+      2,
+      null,
+      "null"
+     ]
+    ],
+    "guards rewritten": [],
+    "changed": {
+     "handling": [
+      [
+       "FORWARDS"
+      ],
+      [
+       "CONSUMES",
+       "FORWARDS"
+      ]
+     ]
+    },
+    "ok": {
+     "old occurrences kept": true,
+     "every added fact has a new end": true,
+     "a lost fact is only a rewritten guard": true,
+     "occurrence-read fields change only with a new occurrence": true,
+     "other fields unchanged": true
+    },
+    "side": "read (whole-record value)"
+   }
+  ]
+ },
+ "design": {
+  "modules": 2,
+  "elements": 48,
+  "fields": 15,
+  "changed": []
+ }
+}

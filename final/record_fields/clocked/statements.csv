@@ -1,0 +1,7 @@
+module,entity,record,occurrence,line,text,clocked,fields,value records,value is a process variable,pairs on the record
+neorv32_bus,neorv32_bus_reg,device_req_o,3,222,device_req_o <= host_req_i;,True,12,host_req_i#3,False,clk_i#3 SEQUENCES; host_req_i#3 CARRIES; host_req_i.stb#2 GATES
+neorv32_bus,neorv32_bus_reg,host_rsp_o,3,246,host_rsp_o <= device_rsp_i;,True,3,device_rsp_i#2,False,clk_i#5 SEQUENCES; device_rsp_i#2 CARRIES
+neorv32_bus,neorv32_bus_amo_rmw,arbiter,6,763,arbiter <= arbiter_nxt;,True,4,arbiter_nxt#2,False,arbiter_nxt#2 CARRIES; clk_i#3 SEQUENCES
+neorv32_cache,neorv32_cache,ctrl,10,126,ctrl <= ctrl_nxt;,True,8,ctrl_nxt#2,False,clk_i#3 SEQUENCES; ctrl_nxt#2 CARRIES
+neorv32_cpu_control,neorv32_cpu_control,ctrl,3,275,ctrl       <= ctrl_nxt;,True,39,ctrl_nxt#2,False,clk_i#5 SEQUENCES; ctrl_nxt#2 CARRIES
+neorv32_cpu_control,neorv32_cpu_control,exe_engine,29,276,exe_engine <= exe_engine_nxt;,True,6,exe_engine_nxt#2,False,clk_i#5 SEQUENCES; exe_engine_nxt#2 CARRIES
