@@ -1,0 +1,339 @@
+{
+ "closed sets": {
+  "RTL_heldout/neorv32_cpu_cp_fpu": {
+   "removed": [
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.unsign",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.sign",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.over",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.under",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.result_tmp",
+     null,
+     "std_ulogic_vector(31 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.result",
+     null,
+     "std_ulogic_vector(31 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.int",
+     null,
+     "std_ulogic_vector(31 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.mant",
+     null,
+     "std_ulogic_vector(22 downto 0)"
+    ]
+   ],
+   "added": [
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.norm_r",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.cnt_pre",
+     null,
+     "std_ulogic_vector(8 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.cnt_of",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.cnt_uf",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.res_sgn",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.res_exp",
+     null,
+     "std_ulogic_vector(7 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.res_man",
+     null,
+     "std_ulogic_vector(22 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.done",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.dir",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.zero",
+     null,
+     "std_ulogic"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.upper",
+     null,
+     "std_ulogic_vector(31 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "sreg.lower",
+     null,
+     "std_ulogic_vector(22 downto 0)"
+    ]
+   ],
+   "type changed": [
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "ctrl.cnt",
+     "std_ulogic_vector(7 downto 0)",
+     "std_ulogic_vector(8 downto 0)"
+    ],
+    [
+     "neorv32_cpu_cp_fpu_normalizer",
+     "round.output",
+     "std_ulogic_vector(32 downto 0)",
+     "std_ulogic_vector(24 downto 0)"
+    ]
+   ],
+   "order changed": true
+  }
+ },
+ "maps": {
+  "tuning": {
+   "modules": 17,
+   "byte-identical": 17,
+   "differ": []
+  },
+  "heldout": {
+   "modules": 26,
+   "byte-identical": 25,
+   "differ": [
+    {
+     "module": "neorv32_cpu_cp_fpu",
+     "elements": [
+      241,
+      245
+     ],
+     "removed": [
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.over"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.result"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.result_tmp"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.sign"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.under"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.unsign"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.int"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.mant"
+      ]
+     ],
+     "added": [
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.cnt_of"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.cnt_pre"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.cnt_uf"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.norm_r"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.res_exp"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.res_man"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.res_sgn"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.dir"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.done"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.lower"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.upper"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.zero"
+      ]
+     ],
+     "changed": [
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "clk_i"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.class"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.cnt"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.flags"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "ctrl.state"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "integer_i"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "mantissa_i"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "result_o"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "rmode_i"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "round.en"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "round.output"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "rstn_i"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sign_i"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.ext_g"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.ext_r"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "sreg.ext_s"
+      ],
+      [
+       "neorv32_cpu_cp_fpu_normalizer",
+       "start_i"
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "traced inputs": {
+  "tuning": {
+   "modules": 15,
+   "changed": [],
+   "characters": [
+    943179,
+    943179
+   ]
+  },
+  "heldout": {
+   "modules": 26,
+   "changed": [
+    "neorv32_cpu_cp_fpu"
+   ],
+   "characters": [
+    1915993,
+    1963112
+   ]
+  }
+ }
+}

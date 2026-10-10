@@ -1,0 +1,42 @@
+{
+ "assets_heldout26_m7e194es0ism_r0": {
+  "fpu listings": 42,
+  "normalizer listings": 0,
+  "on an element the fix removes": []
+ },
+ "assets_heldout26_m7e194es0ism_r1": {
+  "fpu listings": 21,
+  "normalizer listings": 0,
+  "on an element the fix removes": []
+ },
+ "assets_heldout26_m7e194es0ism_r2": {
+  "fpu listings": 34,
+  "normalizer listings": 0,
+  "on an element the fix removes": []
+ },
+ "assets_heldout26_m7e194es0opt1_g54_r0": {
+  "fpu listings": 22,
+  "normalizer listings": 0,
+  "on an element the fix removes": []
+ },
+ "assets_heldout26_m7e194es0opt1_g54_r1": {
+  "fpu listings": 34,
+  "normalizer listings": 0,
+  "on an element the fix removes": []
+ },
+ "assets_heldout26_m7e194es0opt1_g54_r2": {
+  "fpu listings": 39,
+  "normalizer listings": 0,
+  "on an element the fix removes": []
+ },
+ "assets_opt_heldout_v0_r0": {
+  "fpu listings": 70,
+  "normalizer listings": 13,
+  "on an element the fix removes": []
+ },
+ "assets_opt_heldout_v1_r0": {
+  "fpu listings": 72,
+  "normalizer listings": 17,
+  "on an element the fix removes": []
+ }
+}

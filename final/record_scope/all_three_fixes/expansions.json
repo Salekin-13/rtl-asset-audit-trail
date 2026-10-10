@@ -1,0 +1,1216 @@
+{
+ "neorv32_bus": [
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "device_req_o",
+   "occurrence": 2,
+   "line": 219,
+   "text": "device_req_o <= req_terminate_c;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "device_req_o",
+   "occurrence": 3,
+   "line": 222,
+   "text": "device_req_o <= host_req_i;",
+   "clocked": true,
+   "fields": 12,
+   "value records": [
+    "host_req_i#3"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#3 SEQUENCES",
+    "host_req_i#3 CARRIES",
+    "host_req_i.stb#2 GATES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "device_req_o",
+   "occurrence": 7,
+   "line": 233,
+   "text": "device_req_o <= host_req_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [
+    "host_req_i#7"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "host_req_i#7 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "host_rsp_o",
+   "occurrence": 2,
+   "line": 244,
+   "text": "host_rsp_o <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#5 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "host_rsp_o",
+   "occurrence": 3,
+   "line": 246,
+   "text": "host_rsp_o <= device_rsp_i;",
+   "clocked": true,
+   "fields": 3,
+   "value records": [
+    "device_rsp_i#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#5 SEQUENCES",
+    "device_rsp_i#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_reg",
+   "record": "host_rsp_o",
+   "occurrence": 4,
+   "line": 253,
+   "text": "host_rsp_o <= device_rsp_i;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [
+    "device_rsp_i#3"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "device_rsp_i#3 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_gateway",
+   "record": "a_req_o",
+   "occurrence": 2,
+   "line": 366,
+   "text": "a_req_o <= port_req(0); port_rsp(0) <= a_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "port_req#2 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_gateway",
+   "record": "b_req_o",
+   "occurrence": 2,
+   "line": 367,
+   "text": "b_req_o <= port_req(1); port_rsp(1) <= b_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "port_req#3 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_gateway",
+   "record": "c_req_o",
+   "occurrence": 2,
+   "line": 368,
+   "text": "c_req_o <= port_req(2); port_rsp(2) <= c_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "port_req#4 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_gateway",
+   "record": "x_req_o",
+   "occurrence": 2,
+   "line": 369,
+   "text": "x_req_o <= port_req(3); port_rsp(3) <= x_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "port_req#5 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_gateway",
+   "record": "int_rsp",
+   "occurrence": 2,
+   "line": 395,
+   "text": "int_rsp <= tmp_v;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": true,
+   "pairs on the record": [
+    "port_rsp#7 SOURCES",
+    "port_rsp#8 SOURCES",
+    "port_rsp#9 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 3,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_00_req_o",
+   "occurrence": 2,
+   "line": 617,
+   "text": "dev_00_req_o <= dev_req(0);  dev_rsp(0)  <= dev_00_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#2 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_01_req_o",
+   "occurrence": 2,
+   "line": 618,
+   "text": "dev_01_req_o <= dev_req(1);  dev_rsp(1)  <= dev_01_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#3 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_02_req_o",
+   "occurrence": 2,
+   "line": 619,
+   "text": "dev_02_req_o <= dev_req(2);  dev_rsp(2)  <= dev_02_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#4 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_03_req_o",
+   "occurrence": 2,
+   "line": 620,
+   "text": "dev_03_req_o <= dev_req(3);  dev_rsp(3)  <= dev_03_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#5 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_04_req_o",
+   "occurrence": 2,
+   "line": 621,
+   "text": "dev_04_req_o <= dev_req(4);  dev_rsp(4)  <= dev_04_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#6 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_05_req_o",
+   "occurrence": 2,
+   "line": 622,
+   "text": "dev_05_req_o <= dev_req(5);  dev_rsp(5)  <= dev_05_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#7 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_06_req_o",
+   "occurrence": 2,
+   "line": 623,
+   "text": "dev_06_req_o <= dev_req(6);  dev_rsp(6)  <= dev_06_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#8 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_07_req_o",
+   "occurrence": 2,
+   "line": 624,
+   "text": "dev_07_req_o <= dev_req(7);  dev_rsp(7)  <= dev_07_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#9 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_08_req_o",
+   "occurrence": 2,
+   "line": 625,
+   "text": "dev_08_req_o <= dev_req(8);  dev_rsp(8)  <= dev_08_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#10 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_09_req_o",
+   "occurrence": 2,
+   "line": 626,
+   "text": "dev_09_req_o <= dev_req(9);  dev_rsp(9)  <= dev_09_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#11 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_10_req_o",
+   "occurrence": 2,
+   "line": 627,
+   "text": "dev_10_req_o <= dev_req(10); dev_rsp(10) <= dev_10_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#12 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_11_req_o",
+   "occurrence": 2,
+   "line": 628,
+   "text": "dev_11_req_o <= dev_req(11); dev_rsp(11) <= dev_11_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#13 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_12_req_o",
+   "occurrence": 2,
+   "line": 629,
+   "text": "dev_12_req_o <= dev_req(12); dev_rsp(12) <= dev_12_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#14 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_13_req_o",
+   "occurrence": 2,
+   "line": 630,
+   "text": "dev_13_req_o <= dev_req(13); dev_rsp(13) <= dev_13_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#15 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_14_req_o",
+   "occurrence": 2,
+   "line": 631,
+   "text": "dev_14_req_o <= dev_req(14); dev_rsp(14) <= dev_14_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#16 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_15_req_o",
+   "occurrence": 2,
+   "line": 632,
+   "text": "dev_15_req_o <= dev_req(15); dev_rsp(15) <= dev_15_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#17 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_16_req_o",
+   "occurrence": 2,
+   "line": 633,
+   "text": "dev_16_req_o <= dev_req(16); dev_rsp(16) <= dev_16_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#18 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_17_req_o",
+   "occurrence": 2,
+   "line": 634,
+   "text": "dev_17_req_o <= dev_req(17); dev_rsp(17) <= dev_17_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#19 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_18_req_o",
+   "occurrence": 2,
+   "line": 635,
+   "text": "dev_18_req_o <= dev_req(18); dev_rsp(18) <= dev_18_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#20 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_19_req_o",
+   "occurrence": 2,
+   "line": 636,
+   "text": "dev_19_req_o <= dev_req(19); dev_rsp(19) <= dev_19_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#21 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_20_req_o",
+   "occurrence": 2,
+   "line": 637,
+   "text": "dev_20_req_o <= dev_req(20); dev_rsp(20) <= dev_20_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#22 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_21_req_o",
+   "occurrence": 2,
+   "line": 638,
+   "text": "dev_21_req_o <= dev_req(21); dev_rsp(21) <= dev_21_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#23 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_22_req_o",
+   "occurrence": 2,
+   "line": 639,
+   "text": "dev_22_req_o <= dev_req(22); dev_rsp(22) <= dev_22_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#24 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_23_req_o",
+   "occurrence": 2,
+   "line": 640,
+   "text": "dev_23_req_o <= dev_req(23); dev_rsp(23) <= dev_23_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#25 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_24_req_o",
+   "occurrence": 2,
+   "line": 641,
+   "text": "dev_24_req_o <= dev_req(24); dev_rsp(24) <= dev_24_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#26 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_25_req_o",
+   "occurrence": 2,
+   "line": 642,
+   "text": "dev_25_req_o <= dev_req(25); dev_rsp(25) <= dev_25_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#27 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_26_req_o",
+   "occurrence": 2,
+   "line": 643,
+   "text": "dev_26_req_o <= dev_req(26); dev_rsp(26) <= dev_26_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#28 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_27_req_o",
+   "occurrence": 2,
+   "line": 644,
+   "text": "dev_27_req_o <= dev_req(27); dev_rsp(27) <= dev_27_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#29 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_28_req_o",
+   "occurrence": 2,
+   "line": 645,
+   "text": "dev_28_req_o <= dev_req(28); dev_rsp(28) <= dev_28_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#30 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_29_req_o",
+   "occurrence": 2,
+   "line": 646,
+   "text": "dev_29_req_o <= dev_req(29); dev_rsp(29) <= dev_29_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#31 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_30_req_o",
+   "occurrence": 2,
+   "line": 647,
+   "text": "dev_30_req_o <= dev_req(30); dev_rsp(30) <= dev_30_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#32 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "dev_31_req_o",
+   "occurrence": 2,
+   "line": 648,
+   "text": "dev_31_req_o <= dev_req(31); dev_rsp(31) <= dev_31_rsp_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "dev_req#33 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_io_switch",
+   "record": "main_rsp",
+   "occurrence": 3,
+   "line": 690,
+   "text": "main_rsp <= tmp_v;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": true,
+   "pairs on the record": [
+    "dev_rsp#35 SOURCES",
+    "dev_rsp#36 SOURCES",
+    "dev_rsp#37 SOURCES"
+   ],
+   "fields whose pairs differ from the record's": 3,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_amo_rmw",
+   "record": "arbiter",
+   "occurrence": 6,
+   "line": 763,
+   "text": "arbiter <= arbiter_nxt;",
+   "clocked": true,
+   "fields": 4,
+   "value records": [
+    "arbiter_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "arbiter_nxt#2 CARRIES",
+    "clk_i#3 SEQUENCES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_amo_rmw",
+   "record": "arbiter_nxt",
+   "occurrence": 3,
+   "line": 772,
+   "text": "arbiter_nxt <= arbiter;",
+   "clocked": false,
+   "fields": 4,
+   "value records": [
+    "arbiter#8"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "arbiter#8 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_bus_amo_rvs",
+   "record": "sys_req_o",
+   "occurrence": 2,
+   "line": 942,
+   "text": "sys_req_o <= core_req_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [
+    "core_req_i#9"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "core_req_i#9 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cache": [
+  {
+   "entity": "neorv32_cache",
+   "record": "ctrl",
+   "occurrence": 10,
+   "line": 126,
+   "text": "ctrl <= ctrl_nxt;",
+   "clocked": true,
+   "fields": 8,
+   "value records": [
+    "ctrl_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#3 SEQUENCES",
+    "ctrl_nxt#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_cache",
+   "record": "bus_req_o",
+   "occurrence": 2,
+   "line": 159,
+   "text": "bus_req_o       <= host_req_i;",
+   "clocked": false,
+   "fields": 12,
+   "value records": [
+    "host_req_i#7"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "host_req_i#7 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_cache",
+   "record": "host_rsp_o",
+   "occurrence": 6,
+   "line": 209,
+   "text": "host_rsp_o <= bus_rsp_i;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [
+    "bus_rsp_i#3"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "bus_rsp_i#3 CARRIES",
+    "ctrl.state#4 SELECTS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cpu": [
+  {
+   "entity": "neorv32_cpu",
+   "record": "icc_tx_o",
+   "occurrence": 3,
+   "line": 455,
+   "text": "icc_tx_o <= icc_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cpu_cp_cfu": [],
+ "neorv32_cpu_cp_muldiv": [],
+ "neorv32_cpu_pmp": [],
+ "neorv32_debug_dtm": [],
+ "neorv32_hwspinlock": [
+  {
+   "entity": "neorv32_hwspinlock",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 61,
+   "text": "bus_rsp_o <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#5 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_imem": [],
+ "neorv32_spi": [
+  {
+   "entity": "neorv32_spi",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 119,
+   "text": "bus_rsp_o         <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_sys": [],
+ "neorv32_trng": [
+  {
+   "entity": "neorv32_trng",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 93,
+   "text": "bus_rsp_o <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_twi": [
+  {
+   "entity": "neorv32_twi",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 123,
+   "text": "bus_rsp_o   <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_uart": [
+  {
+   "entity": "neorv32_uart",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 155,
+   "text": "bus_rsp_o          <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_wdt": [
+  {
+   "entity": "neorv32_wdt",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 74,
+   "text": "bus_rsp_o    <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_sys_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_boot_rom": [],
+ "neorv32_fifo": [],
+ "neorv32_cpu_alu": [],
+ "neorv32_cpu_control": [
+  {
+   "entity": "neorv32_cpu_control",
+   "record": "ctrl",
+   "occurrence": 2,
+   "line": 267,
+   "text": "ctrl             <= ctrl_bus_zero_c;",
+   "clocked": false,
+   "fields": 39,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#5 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_cpu_control",
+   "record": "ctrl",
+   "occurrence": 3,
+   "line": 275,
+   "text": "ctrl       <= ctrl_nxt;",
+   "clocked": true,
+   "fields": 39,
+   "value records": [
+    "ctrl_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#5 SEQUENCES",
+    "ctrl_nxt#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_cpu_control",
+   "record": "exe_engine",
+   "occurrence": 29,
+   "line": 276,
+   "text": "exe_engine <= exe_engine_nxt;",
+   "clocked": true,
+   "fields": 6,
+   "value records": [
+    "exe_engine_nxt#2"
+   ],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "clk_i#5 SEQUENCES",
+    "exe_engine_nxt#2 CARRIES"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  },
+  {
+   "entity": "neorv32_cpu_control",
+   "record": "ctrl_nxt",
+   "occurrence": 3,
+   "line": 312,
+   "text": "ctrl_nxt             <= ctrl_bus_zero_c;",
+   "clocked": false,
+   "fields": 39,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_cpu_counters": [],
+ "neorv32_cpu_cp_bitmanip": [],
+ "neorv32_cpu_cp_cond": [],
+ "neorv32_cpu_cp_crypto": [],
+ "neorv32_cpu_cp_fpu": [],
+ "neorv32_cpu_cp_shifter": [],
+ "neorv32_cpu_decompressor": [],
+ "neorv32_cpu_frontend": [],
+ "neorv32_cpu_icc": [],
+ "neorv32_cpu_lsu": [],
+ "neorv32_cpu_regfile": [],
+ "neorv32_debug_auth": [],
+ "neorv32_debug_dm": [
+  {
+   "entity": "neorv32_debug_dm",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 653,
+   "text": "bus_rsp_o    <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#11 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_dmem": [],
+ "neorv32_gpio": [
+  {
+   "entity": "neorv32_gpio",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 58,
+   "text": "bus_rsp_o <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_gptmr": [
+  {
+   "entity": "neorv32_gptmr",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 62,
+   "text": "bus_rsp_o   <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_neoled": [
+  {
+   "entity": "neorv32_neoled",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 120,
+   "text": "bus_rsp_o     <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_onewire": [
+  {
+   "entity": "neorv32_onewire",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 129,
+   "text": "bus_rsp_o     <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_pwm": [
+  {
+   "entity": "neorv32_pwm",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 67,
+   "text": "bus_rsp_o <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_sdi": [
+  {
+   "entity": "neorv32_sdi",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 116,
+   "text": "bus_rsp_o         <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_slink": [
+  {
+   "entity": "neorv32_slink",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 122,
+   "text": "bus_rsp_o          <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_sysinfo": [],
+ "neorv32_twd": [
+  {
+   "entity": "neorv32_twd",
+   "record": "bus_rsp_o",
+   "occurrence": 2,
+   "line": 137,
+   "text": "bus_rsp_o         <= rsp_terminate_c;",
+   "clocked": false,
+   "fields": 3,
+   "value records": [],
+   "value is a process variable": false,
+   "pairs on the record": [
+    "rstn_i#3 RESETS"
+   ],
+   "fields whose pairs differ from the record's": 0,
+   "source fields not in the closed set": []
+  }
+ ],
+ "neorv32_xbus": []
+}
