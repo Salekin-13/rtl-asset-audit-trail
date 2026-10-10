@@ -1,0 +1,1715 @@
+{
+ "summary": {
+  "tuning": {
+   "modules": 15,
+   "multi-entity modules": [
+    "neorv32_bus",
+    "neorv32_cache",
+    "neorv32_sys",
+    "neorv32_trng"
+   ],
+   "traced input text changed": [
+    "neorv32_bus",
+    "neorv32_cache",
+    "neorv32_sys",
+    "neorv32_trng"
+   ],
+   "characters": [
+    943179,
+    952718
+   ],
+   "clock_reset: entered": 15,
+   "clock_reset: left": 0,
+   "driving_without_receiving: false (both ends in the map; name collision)": 42,
+   "driving_without_receiving: hidden before (an element the name lookup dropped)": 0,
+   "driving_without_receiving: still unmatched": 0,
+   "driving_without_receiving: stored": 42,
+   "no_local_use: entered": 0,
+   "no_local_use: left": 0,
+   "not_on_an_input_path: entered": 3,
+   "not_on_an_input_path: left": 9,
+   "path influence: entries added": 5,
+   "path influence: entries removed": 4,
+   "paths: added (its source was dropped by the name lookup)": 20,
+   "paths: content changed": 9,
+   "paths: new": 129,
+   "paths: removed": 1,
+   "paths: stored": 110,
+   "paths: unchanged": 100,
+   "receiving_without_driving: false (both ends in the map; name collision)": 92,
+   "receiving_without_driving: hidden before (an element the name lookup dropped)": 0,
+   "receiving_without_driving: still unmatched": 0,
+   "receiving_without_driving: stored": 92,
+   "records: entered": 6,
+   "records: left": 0,
+   "self_updating: entered": 0,
+   "self_updating: left": 0
+  },
+  "heldout": {
+   "modules": 26,
+   "multi-entity modules": [
+    "neorv32_cpu_counters",
+    "neorv32_cpu_cp_fpu",
+    "neorv32_pwm"
+   ],
+   "traced input text changed": [
+    "neorv32_cpu_counters",
+    "neorv32_cpu_cp_fpu",
+    "neorv32_pwm"
+   ],
+   "characters": [
+    1915993,
+    1922228
+   ],
+   "clock_reset: entered": 8,
+   "clock_reset: left": 0,
+   "driving_without_receiving: false (both ends in the map; name collision)": 7,
+   "driving_without_receiving: hidden before (an element the name lookup dropped)": 0,
+   "driving_without_receiving: still unmatched": 0,
+   "driving_without_receiving: stored": 7,
+   "no_local_use: entered": 8,
+   "no_local_use: left": 0,
+   "not_on_an_input_path: entered": 3,
+   "not_on_an_input_path: left": 0,
+   "path influence: entries added": 1,
+   "path influence: entries removed": 10,
+   "paths: added (its source was dropped by the name lookup)": 6,
+   "paths: content changed": 3,
+   "paths: new": 181,
+   "paths: stored": 175,
+   "paths: unchanged": 172,
+   "receiving_without_driving: false (both ends in the map; name collision)": 92,
+   "receiving_without_driving: hidden before (an element the name lookup dropped)": 0,
+   "receiving_without_driving: still unmatched": 0,
+   "receiving_without_driving: stored": 92,
+   "records: entered": 3,
+   "records: left": 0,
+   "self_updating: entered": 2,
+   "self_updating: left": 0
+  },
+  "design": {
+   "modules": 2,
+   "multi-entity modules": [],
+   "traced input text changed": [],
+   "characters": [
+    34947,
+    34947
+   ],
+   "clock_reset: entered": 0,
+   "clock_reset: left": 0,
+   "driving_without_receiving: false (both ends in the map; name collision)": 0,
+   "driving_without_receiving: hidden before (an element the name lookup dropped)": 0,
+   "driving_without_receiving: still unmatched": 0,
+   "driving_without_receiving: stored": 0,
+   "no_local_use: entered": 0,
+   "no_local_use: left": 0,
+   "not_on_an_input_path: entered": 0,
+   "not_on_an_input_path: left": 0,
+   "paths: new": 2,
+   "paths: stored": 2,
+   "paths: unchanged": 2,
+   "receiving_without_driving: false (both ends in the map; name collision)": 0,
+   "receiving_without_driving: hidden before (an element the name lookup dropped)": 0,
+   "receiving_without_driving: still unmatched": 0,
+   "receiving_without_driving: stored": 0,
+   "records: entered": 0,
+   "records: left": 0,
+   "self_updating: entered": 0,
+   "self_updating: left": 0
+  }
+ },
+ "rows": {
+  "tuning/neorv32_bus": {
+   "driving_without_receiving": [
+    {
+     "record": "a_req_i.addr SOURCES x_req_o.addr",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.amo SOURCES x_req_o.amo",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.amoop SOURCES x_req_o.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.ben SOURCES x_req_o.ben",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.data SOURCES x_req_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.debug SOURCES x_req_o.debug",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.fence GATES x_req_o.fence",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.lock SOURCES x_req_o.lock",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.priv SOURCES x_req_o.priv",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.rw SOURCES x_req_o.rw",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req_i.src SOURCES x_req_o.src",
+     "verdict": "false"
+    },
+    {
+     "record": "alu_res SOURCES sys_req_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.rdata SOURCES core_rsp_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state GATES core_rsp_o.ack",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state GATES core_rsp_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state GATES core_rsp_o.err",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state GATES sys_req_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state GATES sys_req_o.rw",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state GATES sys_req_o.stb",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.addr SOURCES x_req_o.addr",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.amo SOURCES x_req_o.amo",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.amoop SOURCES x_req_o.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.ben SOURCES x_req_o.ben",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.data SOURCES x_req_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.debug SOURCES x_req_o.debug",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.fence GATES x_req_o.fence",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.lock SOURCES x_req_o.lock",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.priv SOURCES x_req_o.priv",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.rw SOURCES x_req_o.rw",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req_i.src SOURCES x_req_o.src",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.addr",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.amo",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.ben",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.data",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.debug",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.lock",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.priv",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.rw",
+     "verdict": "false"
+    },
+    {
+     "record": "sel GATES x_req_o.src",
+     "verdict": "false"
+    },
+    {
+     "record": "state_nxt CARRIES state",
+     "verdict": "false"
+    },
+    {
+     "record": "stb CARRIES x_req_o.stb",
+     "verdict": "false"
+    }
+   ],
+   "receiving_without_driving": [
+    {
+     "record": "a_req CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req GATED_BY state",
+     "verdict": "false"
+    },
+    {
+     "record": "a_req RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "a_rsp_o.ack DERIVES_FROM x_rsp_i.ack",
+     "verdict": "false"
+    },
+    {
+     "record": "a_rsp_o.data COPIES x_rsp_i.data",
+     "verdict": "false"
+    },
+    {
+     "record": "a_rsp_o.err DERIVES_FROM x_rsp_i.err",
+     "verdict": "false"
+    },
+    {
+     "record": "alu_res CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "alu_res RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.cmd RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.rdata RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.state RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter.wdata RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.cmd COPIES core_req_i.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.cmd GATED_BY core_req_i.amo",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.cmd GATED_BY core_req_i.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.cmd GATED_BY core_req_i.stb",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.rdata COPIES sys_rsp_i.data",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.state GATED_BY core_req_i.amo",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.state GATED_BY core_req_i.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.state GATED_BY core_req_i.stb",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.state GATED_BY sys_rsp_i.ack",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.wdata COPIES core_req_i.data",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.wdata GATED_BY core_req_i.amo",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.wdata GATED_BY core_req_i.amoop",
+     "verdict": "false"
+    },
+    {
+     "record": "arbiter_nxt.wdata GATED_BY core_req_i.stb",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req GATED_BY state",
+     "verdict": "false"
+    },
+    {
+     "record": "b_req RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "b_rsp_o.ack DERIVES_FROM x_rsp_i.ack",
+     "verdict": "false"
+    },
+    {
+     "record": "b_rsp_o.data COPIES x_rsp_i.data",
+     "verdict": "false"
+    },
+    {
+     "record": "b_rsp_o.err DERIVES_FROM x_rsp_i.err",
+     "verdict": "false"
+    },
+    {
+     "record": "device_req_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "device_req_o RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "device_req_o.fence CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "device_req_o.lock CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "device_req_o.stb CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "host_rsp_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "host_rsp_o RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.busy CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.busy RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.cnt CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.cnt RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.err CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.err RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.halt CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.halt RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.lock CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "keeper.lock RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "locked CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "locked RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "locked_nxt SELECTED_BY state",
+     "verdict": "false"
+    },
+    {
+     "record": "sel SELECTED_BY state",
+     "verdict": "false"
+    },
+    {
+     "record": "sel_q CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sel_q RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "state_nxt COPIES state",
+     "verdict": "false"
+    },
+    {
+     "record": "state_nxt GATED_BY x_rsp_i.ack",
+     "verdict": "false"
+    },
+    {
+     "record": "state_nxt SELECTED_BY state",
+     "verdict": "false"
+    },
+    {
+     "record": "stb SELECTED_BY state",
+     "verdict": "false"
+    }
+   ],
+   "paths": [
+    {
+     "entity": "neorv32_bus_amo_rvs",
+     "from": "sys_rsp_i.data",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [],
+       "removed": [
+        "arbiter.state"
+       ]
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.src",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.lock",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "sel",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [
+        "state"
+       ],
+       "removed": []
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.priv",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "state_nxt",
+     "change": "removed"
+    },
+    {
+     "entity": "neorv32_bus_amo_rvs",
+     "from": "sc_fail",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [],
+       "removed": [
+        "arbiter.state"
+       ]
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_amo_rvs",
+     "from": "sys_rsp_i.err",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [],
+       "removed": [
+        "arbiter.state"
+       ]
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.amo",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.rw",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "sys_rsp_i.data",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.amoop",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "x_rsp_i.ack",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rvs",
+     "from": "core_req_i.stb",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [],
+       "removed": [
+        "arbiter.state"
+       ]
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "b_req_i.lock",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [
+        "state"
+       ],
+       "removed": []
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.data",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "a_req_i.stb",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [
+        "state"
+       ],
+       "removed": []
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "sys_rsp_i.err",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "x_rsp_i.err",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.addr",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.ben",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.stb",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "sys_rsp_i.ack",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.debug",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "a_req_i.lock",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [
+        "state"
+       ],
+       "removed": []
+      }
+     }
+    },
+    {
+     "entity": "neorv32_bus_io_switch",
+     "from": "rstn_i",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "x_rsp_i.data",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_io_switch",
+     "from": "clk_i",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "from": "core_req_i.fence",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "from": "b_req_i.stb",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [
+        "state"
+       ],
+       "removed": []
+      }
+     }
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "rstn_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_gateway",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_gateway",
+     "element": "rstn_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_reg",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_reg",
+     "element": "rstn_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "rstn_i",
+     "change": "entered"
+    }
+   ],
+   "records": [
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "core_req_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "core_rsp_o",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "sys_req_o",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "sys_rsp_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "x_req_o",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "x_rsp_i",
+     "change": "entered"
+    }
+   ],
+   "not_on_an_input_path": [
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "state",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "state_nxt",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "x_req_o.fence",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "arbiter_nxt.cmd",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "arbiter_nxt.rdata",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_amo_rmw",
+     "element": "arbiter_nxt.wdata",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "a_rsp_o.ack",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "a_rsp_o.data",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "a_rsp_o.err",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "b_rsp_o.ack",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "b_rsp_o.data",
+     "change": "left"
+    },
+    {
+     "entity": "neorv32_bus_switch",
+     "element": "b_rsp_o.err",
+     "change": "left"
+    }
+   ]
+  },
+  "tuning/neorv32_cache": {
+   "driving_without_receiving": [],
+   "receiving_without_driving": [
+    {
+     "record": "ctrl CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.buf_dir RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.buf_err RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.buf_req RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.buf_sync RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.idx RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.ofs RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.state RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl.tag RESET_BY rstn_i",
+     "verdict": "false"
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neorv32_cache",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cache",
+     "element": "rstn_i",
+     "change": "entered"
+    }
+   ]
+  },
+  "tuning/neorv32_sys": {
+   "driving_without_receiving": [],
+   "receiving_without_driving": [
+    {
+     "record": "rstn_ext_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "rstn_sys_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sreg_ext CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sreg_sys CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "xrstn_ocd_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "xrstn_wdt_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neorv32_sys_reset",
+     "element": "clk_i",
+     "change": "entered"
+    }
+   ]
+  },
+  "tuning/neorv32_trng": {
+   "driving_without_receiving": [],
+   "receiving_without_driving": [
+    {
+     "record": "bus_rsp_o RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "bus_rsp_o.ack CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "bus_rsp_o.data CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "bus_rsp_o.err CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "debias_sreg CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "debias_sreg RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "debias_state CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "debias_state RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "enable CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "enable RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fifo_clr CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fifo_clr RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sample_cnt CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sample_cnt RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sample_en CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sample_en RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sample_sreg CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "sample_sreg RESET_BY rstn_i",
+     "verdict": "false"
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neoTRNG",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neoTRNG",
+     "element": "rstn_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_trng",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_trng",
+     "element": "rstn_i",
+     "change": "entered"
+    }
+   ]
+  },
+  "heldout/neorv32_cpu_counters": {
+   "driving_without_receiving": [
+    {
+     "record": "cycle_rd SOURCES rdata_o",
+     "verdict": "false"
+    },
+    {
+     "record": "hpm_rd SOURCES rdata_o",
+     "verdict": "false"
+    },
+    {
+     "record": "instret_rd SOURCES rdata_o",
+     "verdict": "false"
+    },
+    {
+     "record": "time_rd SOURCES rdata_o",
+     "verdict": "false"
+    }
+   ],
+   "receiving_without_driving": [
+    {
+     "record": "cnt_en CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "cnt_en RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "hpmevent CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "hpmevent RESET_BY rstn_i",
+     "verdict": "false"
+    }
+   ],
+   "paths": [
+    {
+     "entity": "neorv32_cpu_counters",
+     "from": "time_rd",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [],
+       "removed": [
+        "re_i",
+        "sel_i"
+       ]
+      }
+     }
+    },
+    {
+     "entity": "neorv32_cpu_counters",
+     "from": "ctrl_i.csr_wdata",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [],
+       "removed": [
+        "re_i",
+        "sel_i"
+       ]
+      }
+     }
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neorv32_cpu_counters",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_counters",
+     "element": "rstn_i",
+     "change": "entered"
+    }
+   ]
+  },
+  "heldout/neorv32_cpu_cp_fpu": {
+   "driving_without_receiving": [
+    {
+     "record": "flags_i CARRIES ctrl.flags",
+     "verdict": "false"
+    }
+   ],
+   "receiving_without_driving": [
+    {
+     "record": "addsub.add_stage CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.add_stage RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.exp_cnt CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.exp_cnt RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.exp_comp CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.exp_comp RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.flags CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.flags RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.latency CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.latency RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_comp CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_comp RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_g_ext CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_g_ext RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_r_ext CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_r_ext RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_s_ext CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_s_ext RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_sreg CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.man_sreg RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.res_class CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.res_class RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.res_sign CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "addsub.res_sign RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "cmp_ff CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "cmp_ff RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "comp_equal_ff CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "comp_equal_ff RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "comp_less_ff CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "comp_less_ff RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "csr_fflags CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "csr_fflags RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "csr_frm CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "csr_frm RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl_engine.start CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl_engine.start RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl_engine.state CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl_engine.state RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl_engine.valid CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "ctrl_engine.valid RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fflags CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fflags RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.frm CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.frm RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs1 CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs1 RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs1_class CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs1_class RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs2 CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs2 RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs2_class CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fpu_operands.rs2_class RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_compare.done CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_compare.done RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_conv_i2f.done CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_conv_i2f.done RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_conv_i2f.result CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_conv_i2f.result RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_conv_i2f.sign CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_conv_i2f.sign RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_min_max.done CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "fu_min_max.done RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "funct_ff CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "funct_ff RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.buf_ff CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.buf_ff RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.exp_res CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.exp_res RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.flags CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.flags RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.latency CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.latency RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.opa CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.opa RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.opb CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.opb RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.product CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.product RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.res_class CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.res_class RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.sign CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "multiplier.sign RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "res_o CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "res_o RESET_BY rstn_i",
+     "verdict": "false"
+    }
+   ],
+   "paths": [
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "from": "flags_i",
+     "change": "content",
+     "diff": {
+      "influence": {
+       "added": [
+        "ctrl.cnt"
+       ],
+       "removed": [
+        "ctrl.over",
+        "ctrl.result_tmp",
+        "ctrl.sign",
+        "ctrl.under",
+        "ctrl.unsign",
+        "mantissa_i"
+       ]
+      }
+     }
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "from": "exponent_i",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "from": "mantissa_i",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "from": "class_i",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "from": "sreg.ext_s",
+     "change": "added"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_f2i",
+     "from": "ctrl.flags",
+     "change": "added"
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neorv32_cpu_cp_fpu",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu",
+     "element": "rstn_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "rstn_i",
+     "change": "entered"
+    }
+   ],
+   "records": [
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "round",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "sreg",
+     "change": "entered"
+    }
+   ],
+   "self_updating": [
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.cnt",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "sreg.ext_s",
+     "change": "entered"
+    }
+   ],
+   "no_local_use": [
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.over",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.result",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.result_tmp",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.sign",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.under",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "ctrl.unsign",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "sreg.int",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "sreg.mant",
+     "change": "entered"
+    }
+   ],
+   "not_on_an_input_path": [
+    {
+     "entity": "neorv32_cpu_cp_fpu_normalizer",
+     "element": "round.output",
+     "change": "entered"
+    }
+   ]
+  },
+  "heldout/neorv32_pwm": {
+   "driving_without_receiving": [
+    {
+     "record": "ce SOURCES clkgen_en_o",
+     "verdict": "false"
+    },
+    {
+     "record": "pwm SOURCES pwm_o",
+     "verdict": "false"
+    }
+   ],
+   "receiving_without_driving": [
+    {
+     "record": "bus_rsp_o RESET_BY rstn_i",
+     "verdict": "false"
+    },
+    {
+     "record": "bus_rsp_o.ack CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "bus_rsp_o.data CLOCKED_BY clk_i",
+     "verdict": "false"
+    },
+    {
+     "record": "bus_rsp_o.err CLOCKED_BY clk_i",
+     "verdict": "false"
+    }
+   ],
+   "paths": [
+    {
+     "entity": "neorv32_pwm",
+     "from": "clkgen_i",
+     "change": "added"
+    }
+   ],
+   "clock_reset": [
+    {
+     "entity": "neorv32_pwm",
+     "element": "clk_i",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_pwm",
+     "element": "rstn_i",
+     "change": "entered"
+    }
+   ],
+   "not_on_an_input_path": [
+    {
+     "entity": "neorv32_pwm",
+     "element": "clkgen_en_o",
+     "change": "entered"
+    },
+    {
+     "entity": "neorv32_pwm",
+     "element": "pwm_o",
+     "change": "entered"
+    }
+   ]
+  }
+ }
+}

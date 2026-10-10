@@ -35,6 +35,8 @@
 /final/record_fields/*/maps/
 /final/record_fields/*/occurrence_profiles/
 /final/record_fields/*/traced_inputs/
+/final/flow_entities/*/tuning/
+/final/flow_entities/*/heldout/
 # ablation notebooks
 !/notebooks/
 
